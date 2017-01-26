@@ -32,3 +32,21 @@ print("check_leap_year(2000): {}".format(check_leap_year(2000)))
 print("check_leap_year(1990): {}".format(check_leap_year(1990)))
 print("check_leap_year(2012): {}".format(check_leap_year(2012)))
 print("check_leap_year(2100): {}".format(check_leap_year(2100)))
+class Factorialtest(unittest.TestCase):
+    def test_factorial_0(self):
+        self.assertEqual(factorial(0), 1)
+    def test_factorial_1(self):
+        self.assertEqual(factorial(1), 1)
+    def test_factorial_5(self):
+        self.assertEqual(factorial(5), 120)
+class leapyeartest(unittest.TestCase):
+    def test_leap_4(self):
+        self.assertEqual(check_leap_year(4), True)
+    def test_leap_100(self):
+        self.assertEqual(check_leap_year(100), True)
+    def test_leap_400(self):
+        self.assertEqual(check_leap_year(400), True)
+    def test_leap_normal(self):
+        self.assertEqual(check_leap_year(25), False)
+if __name__ == "__main__":
+    unittest.main(verbosity=2)
