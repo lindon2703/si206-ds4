@@ -1,3 +1,4 @@
+import unittest
 # function to return the factorial of a number
 # Add comments
 def factorial(num):
@@ -43,7 +44,7 @@ class leapyeartest(unittest.TestCase):
     def test_leap_4(self):
         self.assertEqual(check_leap_year(4), True)
     def test_leap_100(self):
-        self.assertEqual(check_leap_year(100), True)
+        self.assertEqual(check_leap_year(100), False)
     def test_leap_400(self):
         self.assertEqual(check_leap_year(400), True)
     def test_leap_normal(self):
